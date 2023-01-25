@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <button class="btn btn-primary" (click)="onAddClick()">Display Details</button>
+
+      <p *ngIf="secretDisplay === true"> Secured Password is Luisa</p>
+
+      <!-- <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{fiveClicks: buttonClicks.length >= 4 }"
+        *ngFor="let clickedOn of buttonClicks">{{clickedOn}}</p> -->
+
+      <div *ngFor="let clickedOn of buttonClicks" [ngStyle]="{backgroundColor: clickedOn >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{fiveClicks: clickedOn >= 5}">
+        {{clickedOn}}
+      </div>
+
+    </div>
+  </div>
+</div>
