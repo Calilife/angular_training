@@ -1,0 +1,20 @@
+<header class="app-header">
+  <span class="logo">⚽ MatchFit</span>
+  <span class="tagline">7v7 · Tue & Fri</span>
+</header>
+
+<main class="container">
+  <router-outlet />
+</main>
+
+<nav class="bottom-nav">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="icon">📅</span><span>Week</span>
+  </a>
+  <a routerLink="/library" routerLinkActive="active">
+    <span class="icon">📖</span><span>Exercises</span>
+  </a>
+  <a routerLink="/progress" routerLinkActive="active">
+    <span class="icon">📈</span><span>Progress</span>
+  </a>
+</nav>

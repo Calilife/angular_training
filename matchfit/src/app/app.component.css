@@ -1,0 +1,62 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(15, 23, 25, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 90px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(15, 23, 25, 0.95);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+}
+
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  padding: 4px 16px;
+  border-radius: 10px;
+}
+
+.bottom-nav a .icon {
+  font-size: 1.25rem;
+}
+
+.bottom-nav a.active {
+  color: var(--accent);
+}
